@@ -23,13 +23,19 @@
     <main>
         <h2>Adicionar Nova Receita</h2>
         
-        <form>
+        <form id="recipeForm">
+            <p id="errorMessage" style="color: red;"></p>
+
             <label for="nome-receita">Nome da Receita:</label>
             <input type="text" id="nome-receita" name="nome-receita">
 
             <label for="email">Seu Email:</label>
             <input type="email" id="email" name="email">
 
+            <label for="modo-preparo">Modo de Preparo:</label>
+            <textarea id="modo-preparo" name="modo-preparo" rows="8"></textarea>
+            <p>Caracteres: <span id="charCount">0</span></p>
+            
             <label for="tipo">Tipo:</label>
             <select id="tipo" name="tipo">
                 <option value="doce">Doce</option>
@@ -61,9 +67,9 @@
         <p>&copy; Diego Tomaz Estrela, Letícia Soares - 2025</p>
     </footer>
 
-    <div id="loginModal" class="modal">
+<div id="loginModal" class="modal">
     <div class="modal-content">
-        <span class="close-btn">&times;</span>
+        <span class="close-btn" id="close-btn">&times;</span>
         <h2>Login</h2>
         <form>
             <label for="username">Usuário:</label>
